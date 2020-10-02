@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
+    <!-- include cdn files -->
+    <%- include("../cdn/bootstrap.ejs") %> <%- include("../cdn/googlemaps.ejs")
+    %>
   </head>
   <body>
-    <%- include("../partials/header.ejs") %>
-    <br />
-    <%- body %>
-    <br />
-    <%- include("../partials/footer.ejs") %>
+    <div class="container">
+      <%- include("../partials/header.ejs") %>
+      <br />
+      <%- body %>
+      <br />
+      <%- include("../partials/footer.ejs") %>
+    </div>
   </body>
 </html>

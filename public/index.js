@@ -1,14 +1,6 @@
-// This sample uses the Autocomplete widget to help the user select a
-// place, then it retrieves the address components associated with that
-// place, and then it populates the form fields with those details.
-// This sample requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script
-// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 let placeSearch;
 let autocomplete;
 const componentForm = {
-  //   street_number: "short_name",
   route: "long_name",
   locality: "long_name",
   administrative_area_level_1: "long_name",
@@ -23,8 +15,6 @@ function initAutocomplete() {
     document.getElementById("autocomplete"),
     { types: ["geocode"] }
   );
-  // Avoid paying for data that you don't need by restricting the set of
-  // place fields that are returned to just the address components.
   autocomplete.setFields(["address_component"]);
   // When the user selects an address from the drop-down, populate the
   // address fields in the form.
