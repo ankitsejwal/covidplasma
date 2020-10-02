@@ -1,0 +1,95 @@
+<div class="form-group">
+  <input
+    class="form-control"
+    placeholder="Enter name"
+    name="name"
+    type="text"
+  />
+</div>
+<div class="form-group">
+  <input class="form-control" placeholder="Enter age" name="age" type="text" />
+</div>
+<div class="form-group">
+  <label class="form-text text-muted">Gender</label>
+  <select class="form-control" name="gender" id="">
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
+</div>
+<div class="form-group">
+  <label class="form-text text-muted">Blood Group</label>
+  <select class="form-control" name="gender" id="">
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB+">AB+</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    <option value="not sure">not sure</option>
+  </select>
+</div>
+<div class="form-group">
+  <input class="form-control" placeholder="Email" name="email" type="email" />
+  <small class="form-text text-muted"
+    >We'll hide your email from the internet</small
+  >
+</div>
+<div class="form-group">
+  <input class="form-control" placeholder="phone" name="phone" type="text" />
+  <small class="form-text text-muted"
+    >We'll hide your phone no. from the internet</small
+  >
+</div>
+<div class="form-group" id="locationField">
+  <input
+    class="form-control"
+    style="width: 100%"
+    id="autocomplete"
+    placeholder="Town / City / Village"
+    onFocus="geolocate()"
+    type="text"
+  />
+</div>
+<div id="address">
+  <div class="form-group">
+    <input
+      class="form-control"
+      id="locality"
+      name="locality"
+      placeholder="Locality"
+      disabled="true"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      placeholder="State"
+      id="administrative_area_level_1"
+      name="state"
+      disabled="true"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      id="postal_code"
+      name="zipcode"
+      placeholder="Zip Code"
+      disabled="true"
+      type="hidden"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      id="country"
+      name="country"
+      placeholder="Country"
+      disabled="true"
+    />
+  </div>
+</div>
+<button class="btn btn-block btn-primary" type="submit">Submit</button>
+<%- include("../scripts/google-address.ejs") %>

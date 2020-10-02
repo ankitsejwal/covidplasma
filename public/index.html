@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete Address Form</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFIwfHRthDkwCA78NRXReXGeItcVbdgQI&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id="locationField">
+      <input
+        style="width: 100%"
+        id="autocomplete"
+        placeholder="Enter your address"
+        onFocus="geolocate()"
+        type="text"
+      />
+    </div>
+    <div id="address">
+      <div>
+        <input
+          class="field"
+          id="route"
+          placeholder="Street address"
+          disabled="true"
+        />
+      </div>
+      <div>
+        <input
+          class="field"
+          id="locality"
+          placeholder="locality"
+          disabled="true"
+        />
+      </div>
+      <div>
+        <input
+          class="field"
+          placeholder="State"
+          id="administrative_area_level_1"
+          disabled="true"
+        />
+      </div>
+      <div>
+        <input
+          class="field"
+          id="postal_code"
+          placeholder="Zip Code"
+          disabled="true"
+        />
+      </div>
+      <div>
+        <input
+          class="field"
+          id="country"
+          placeholder="Country"
+          disabled="true"
+        />
+      </div>
+    </div>
+  </body>
+</html>
