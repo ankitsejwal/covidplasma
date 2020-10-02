@@ -4,7 +4,7 @@ const router = express.Router();
 
 router
   .get("/", (req, res) => {
-    res.send("donors");
+    res.render("donors");
   })
   .post("/", (req, res) => {});
 
