@@ -10,15 +10,15 @@
   <input class="form-control" placeholder="Enter age" name="age" type="text" />
 </div>
 <div class="form-group">
-  <label class="form-text text-muted">Gender</label>
   <select class="form-control" name="gender" id="">
-    <option value="male">male</option>
-    <option value="female">female</option>
+    <option value="" disabled selected>Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
   </select>
 </div>
 <div class="form-group">
-  <label class="form-text text-muted">Blood Group</label>
   <select class="form-control" name="bloodGroup" id="">
+    <option value="" disabled selected>Select Blood Group</option>
     <option value="A+">A+</option>
     <option value="A-">A-</option>
     <option value="B+">B+</option>
@@ -56,7 +56,7 @@
     onFocus="geolocate()"
     type="text"
   />
-  <small class="form-text text-muted">Make sure to search for address</small>
+  <small class="form-text text-muted">No need to put complete address</small>
 </div>
 <div id="address">
   <div class="form-group">
