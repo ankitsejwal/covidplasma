@@ -1,7 +1,17 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const donors = require("./routes/donors");
 const seekers = require("./routes/seekers");
+
+// connect database
+mongoose
+  .connect("mongodb://localhost/covidplasma", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(console.log("connected to database..."))
+  .catch((err) => console.error(err));
 
 const app = express();
 
