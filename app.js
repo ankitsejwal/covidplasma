@@ -16,6 +16,8 @@ mongoose
 const app = express();
 
 app.use(expressLayouts);
+app.use(express.urlencoded({ extended: true }));
+
 app.set("view engine", "ejs");
 app.set("layout", "layouts/layout");
 
