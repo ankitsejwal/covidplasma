@@ -10,15 +10,16 @@ nav {
 }
 
 nav .content {
-  margin-left: 3rem;
+  margin-left: 6rem;
 }
 
 #navbarSupportedContent {
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 #enter-detail {
-  margin-left: 3rem;
+  margin-left: 6rem;
+  margin-bottom: 2rem;
 }
 
 #enter-detail .heading-wrapper {
@@ -44,10 +45,12 @@ nav .content {
   background-image: url("../img/covid-bg.jpg");
   background-position: center;
   background-size: cover;
+  padding: 0;
 }
 
 #sidebar-right-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
 }
 
 footer {
