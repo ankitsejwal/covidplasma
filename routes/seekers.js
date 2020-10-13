@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
   .get("/", (req, res) => {
-    res.render("seekers");
+    res.render("seekers", { title: "Get Plasma" });
   })
   .post("/", async (req, res) => {
     await User.create({
