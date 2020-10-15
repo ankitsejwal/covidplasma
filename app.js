@@ -4,6 +4,7 @@ const expressLayouts = require("express-ejs-layouts");
 const home = require("./routes/home");
 const donors = require("./routes/donors");
 const seekers = require("./routes/seekers");
+const login = require("./routes/login");
 
 // connect database
 mongoose
@@ -27,5 +28,6 @@ app.set("layout", "layouts/layout");
 app.use("/", home);
 app.use("/donors", donors);
 app.use("/seekers", seekers);
+app.use("/login", login);
 
 app.listen(process.env.PORT || 3000);

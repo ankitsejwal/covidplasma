@@ -1,0 +1,41 @@
+<div class="row">
+  <div id="sidebar-left" class="col-8">
+    <div class="row">
+      <%- include("./partials/header.ejs") %>
+      <div id="enter-detail" class="col-7">
+        <div class="heading-wrapper">
+          <p class="heading h3 text-muted">Login</p>
+          <p class="paragraph text-muted">
+            If you are Donor/Seeker use your phone number and email address to
+            login.
+          </p>
+        </div>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <input
+              class="form-control form-control-lg"
+              placeholder="Enter Email"
+              name="email"
+              type="email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control form-control-lg"
+              placeholder="Enter Password"
+              name="password"
+              type="password"
+            />
+          </div>
+          <button class="btn btn-lg btn-block btn-primary" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="col-5"></div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-4 vh-100 sticky-top">
+    <div id="sidebar-right-wrapper" class="vh-100 vw-100"></div>
+  </div>
+</div>
