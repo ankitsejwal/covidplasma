@@ -30,4 +30,6 @@ app.use("/donors", donors);
 app.use("/seekers", seekers);
 app.use("/login", login);
 
-app.listen(process.env.PORT || 3000);
+const server = app.listen(process.env.PORT || 3000, () => {
+  console.log(`app running on port ${server.address().port}`);
+});
