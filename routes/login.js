@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/user");
+const auth = require("../middleware/auth");
 const router = express.Router();
 
 router
@@ -18,8 +19,8 @@ router
       }
       // if user found then
       if (user.phone === password) {
-        // check if the password matches
-        res.send("logged in successfully");
+        const token = user.generateAuthToken();
+        res.header("x-auth-token", token).send(token);
       } else {
         // password didn't match
         res.send("Invalid credentials");
@@ -28,5 +29,10 @@ router
       console.error(err);
     }
   });
+
+router.get("/me", auth, async (req, res) => {
+  const user = await User.findById(req.user._id);
+  res.send(user);
+});
 
 module.exports = router;

@@ -6,6 +6,12 @@ const donors = require("./routes/donors");
 const seekers = require("./routes/seekers");
 const login = require("./routes/login");
 
+// check if privatekey missing
+if (!process.env.PRIVATE_KEY) {
+  console.error("Private key missing ...");
+  process.exit(1);
+}
+
 // connect database
 mongoose
   .connect("mongodb://localhost/covidplasma", {
@@ -30,4 +36,6 @@ app.use("/donors", donors);
 app.use("/seekers", seekers);
 app.use("/login", login);
 
-app.listen(process.env.PORT || 3000);
+const server = app.listen(process.env.PORT || 3000, () => {
+  console.log(`app running on port ${server.address().port}`);
+});

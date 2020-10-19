@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -48,37 +49,46 @@ const userSchema = new mongoose.Schema({
   address: {
     locality: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
     state: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
     zipcode: {
       type: Number,
-      minlength: 3,
+      minlength: 0,
       maxlength: 10,
+      required: false,
     },
     country: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
   },
-  userType: {
+  role: {
     type: String,
-    enum: ["donor", "seeker"],
+    enum: ["donor", "seeker", "admin"],
     required: true,
   },
-  joinDate: {
+  cdate: {
     type: Date,
     default: Date.now,
   },
 });
+
+userSchema.methods.generateAuthToken = function () {
+  const token = jwt.sign(
+    { _id: this._id, role: this.role },
+    process.env.PRIVATE_KEY
+  );
+  return token;
+};
 
 module.exports = mongoose.model("User", userSchema);

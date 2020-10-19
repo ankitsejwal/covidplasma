@@ -4,7 +4,8 @@
   "description": "covidplasma.world will connect COVID-19 convalescent plasma donors to those in dire need of convalescent plasma therapy.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --require dotenv/config app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,11 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
