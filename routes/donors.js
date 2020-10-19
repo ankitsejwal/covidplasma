@@ -21,7 +21,7 @@ router
         zipcode: req.body.zipcode,
         country: req.body.country,
       },
-      userType: "donor",
+      role: "donor",
     });
     res.redirect("/donors");
   });

@@ -49,24 +49,25 @@ const userSchema = new mongoose.Schema({
   address: {
     locality: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
     state: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
     zipcode: {
       type: Number,
-      minlength: 3,
+      minlength: 0,
       maxlength: 10,
+      required: false,
     },
     country: {
       type: String,
-      minlength: 3,
+      minlength: 0,
       maxlength: 50,
       required: false,
     },
