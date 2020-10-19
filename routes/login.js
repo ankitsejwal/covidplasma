@@ -1,6 +1,6 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const auth = require("../middleware/auth");
 const router = express.Router();
 
 router
@@ -21,7 +21,6 @@ router
       if (user.phone === password) {
         const token = user.generateAuthToken();
         res.header("x-auth-token", token).send(token);
-        next();
       } else {
         // password didn't match
         res.send("Invalid credentials");
@@ -30,5 +29,11 @@ router
       console.error(err);
     }
   });
+
+router.get("/me", auth, async (req, res) => {
+  console.log(req.user._id);
+  const user = await User.findById(req.user._id);
+  res.send(user);
+});
 
 module.exports = router;
