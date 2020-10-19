@@ -73,7 +73,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["donor", "seeker"],
+    enum: ["donor", "seeker", "admin"],
     required: true,
   },
   cdate: {
