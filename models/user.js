@@ -71,12 +71,12 @@ const userSchema = new mongoose.Schema({
       required: false,
     },
   },
-  userType: {
+  role: {
     type: String,
     enum: ["donor", "seeker"],
     required: true,
   },
-  joinDate: {
+  cdate: {
     type: Date,
     default: Date.now,
   },
