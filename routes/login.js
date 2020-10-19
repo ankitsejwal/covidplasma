@@ -1,4 +1,5 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const router = express.Router();
 
@@ -18,8 +19,9 @@ router
       }
       // if user found then
       if (user.phone === password) {
+        const token = user.generateAuthToken();
         // check if the password matches
-        res.send("logged in successfully");
+        res.send(token);
       } else {
         // password didn't match
         res.send("Invalid credentials");
