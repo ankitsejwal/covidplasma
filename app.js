@@ -6,6 +6,12 @@ const donors = require("./routes/donors");
 const seekers = require("./routes/seekers");
 const login = require("./routes/login");
 
+// check if privatekey missing
+if (!process.env.PRIVATE_KEY) {
+  console.error("Private key missing ...");
+  process.exit(1);
+}
+
 // connect database
 mongoose
   .connect("mongodb://localhost/covidplasma", {
