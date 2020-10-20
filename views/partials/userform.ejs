@@ -26,14 +26,14 @@
 <div class="form-group">
   <select class="form-control form-control-lg" name="bloodGroup" id="">
     <option value="" disabled selected>Select Blood Group</option>
-    <option value="A+">A+</option>
-    <option value="A-">A-</option>
-    <option value="B+">B+</option>
-    <option value="B-">B-</option>
-    <option value="AB+">AB+</option>
-    <option value="AB-">AB+</option>
-    <option value="O+">O+</option>
-    <option value="O-">O-</option>
+    <option value="a+">A+</option>
+    <option value="a-">A-</option>
+    <option value="b+">B+</option>
+    <option value="b-">B-</option>
+    <option value="ab+">AB+</option>
+    <option value="ab-">AB+</option>
+    <option value="o+">O+</option>
+    <option value="o-">O-</option>
     <option value="notsure">not sure</option>
   </select>
   <small class="form-text text-muted">Choose not sure when unaware</small>
@@ -59,11 +59,13 @@
     class="form-control form-control-lg"
     style="width: 100%"
     id="autocomplete"
-    placeholder="Town / City / Village"
+    placeholder="Enter a city near you"
     onFocus="geolocate()"
     type="text"
   />
-  <small class="form-text text-muted">No need to put complete address</small>
+  <small class="form-text text-muted"
+    >Enter the biggest city near you with COVID hospitals</small
+  >
 </div>
 <div id="address">
   <div class="form-group">

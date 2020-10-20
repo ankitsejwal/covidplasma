@@ -5,9 +5,10 @@ const home = require("./routes/home");
 const donors = require("./routes/donors");
 const seekers = require("./routes/seekers");
 const login = require("./routes/login");
+const dashboard = require("./routes/dashboard");
 
 // check if privatekey missing
-if (!process.env.PRIVATE_KEY) {
+if (!process.env.JWT_PRIVATE_KEY) {
   console.error("Private key missing ...");
   process.exit(1);
 }
@@ -35,6 +36,7 @@ app.use("/", home);
 app.use("/donors", donors);
 app.use("/seekers", seekers);
 app.use("/login", login);
+app.use("/dashboard", dashboard);
 
 const server = app.listen(process.env.PORT || 3000, () => {
   console.log(`app running on port ${server.address().port}`);

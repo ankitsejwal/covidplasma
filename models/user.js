@@ -20,16 +20,16 @@ const userSchema = new mongoose.Schema({
   bloodGroup: {
     type: String,
     enum: [
-      "A+",
-      "A-",
-      "B+",
-      "B-",
-      "C+",
-      "C-",
-      "O+",
-      "O-",
-      "AB+",
-      "AB-",
+      "a+",
+      "a-",
+      "b+",
+      "b-",
+      "c+",
+      "c-",
+      "o+",
+      "o-",
+      "ab+",
+      "ab-",
       "notsure",
     ],
     required: true,
@@ -86,7 +86,7 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     { _id: this._id, role: this.role },
-    process.env.PRIVATE_KEY
+    process.env.JWT_PRIVATE_KEY
   );
   return token;
 };
