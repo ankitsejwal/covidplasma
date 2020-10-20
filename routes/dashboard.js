@@ -4,13 +4,27 @@ const User = require("../models/user");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  let searchOptions = {
-    name: new RegExp(req.query.search),
-  };
+  const keyword = req.query.keyword;
+  const searchBy = req.query.searchBy;
 
+  console.log(keyword);
+  console.log(searchBy);
+
+  let searchOptions = {};
+
+  if (searchBy == "name") {
+    searchOptions = { name: new RegExp(keyword) };
+  }
+  if (searchBy == "bloodGroup") {
+    searchOptions = { bloodGroup: new RegExp(keyword) };
+  }
+  if (searchBy == "state") {
+    searchOptions = { state: new RegExp(keyword) };
+  }
   // if search string empty
-  if (!req.query.search) searchOptions = {};
+  if (!keyword) searchOptions = {};
 
+  console.log(searchOptions);
   const users = await User.find(searchOptions);
   res.render("dashboard", { title: "Dashboard - CovidPlasma", users: users });
 });

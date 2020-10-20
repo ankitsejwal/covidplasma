@@ -5,16 +5,25 @@
       <div id="enter-detail" class="col-7">
         <div class="heading-wrapper">
           <p class="heading h3 text-muted">Search donors/seekers</p>
-          <p class="paragraph text-muted">Select either Seeker or Donor.</p>
+          <p class="paragraph text-muted">
+            Use dropdown menu to search by Name, blood Group or City.
+          </p>
         </div>
         <form action="/dashboard" method="GET">
           <div class="input-group">
             <input
               class="form-control form-control-lg"
               type="text"
-              name="search"
-              placeholder="Search ..."
+              name="keyword"
+              placeholder="Search by ..."
             />
+            <div class="input-group-append">
+              <select class="custom-select custom-select-lg" name="searchBy">
+                <option value="name">Name</option>
+                <option value="bloodGroup" selected>Blood Group</option>
+                <option value="state">State</option>
+              </select>
+            </div>
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">Search</button>
             </div>
