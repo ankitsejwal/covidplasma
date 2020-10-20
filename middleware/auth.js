@@ -5,7 +5,7 @@ module.exports = function (req, res, next) {
   if (!token) return res.status(400).send("Access denied. No token provided");
 
   try {
-    const decode = jwt.verify(token, process.env.PRIVATE_KEY);
+    const decode = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
     req.user = decode;
     next();
   } catch (ex) {

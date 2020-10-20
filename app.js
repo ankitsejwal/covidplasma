@@ -7,7 +7,7 @@ const seekers = require("./routes/seekers");
 const login = require("./routes/login");
 
 // check if privatekey missing
-if (!process.env.PRIVATE_KEY) {
+if (!process.env.JWT_PRIVATE_KEY) {
   console.error("Private key missing ...");
   process.exit(1);
 }
