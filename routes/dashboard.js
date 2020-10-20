@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     searchOptions = { bloodGroup: new RegExp(keyword) };
   }
   if (searchBy == "state") {
-    searchOptions = { state: new RegExp(keyword) };
+    searchOptions = { "address.state": new RegExp(keyword) };
   }
   // if search string empty
   if (!keyword) searchOptions = {};
