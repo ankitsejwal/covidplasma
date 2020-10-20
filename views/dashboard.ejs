@@ -1,0 +1,43 @@
+<div class="row">
+  <div id="sidebar-left" class="col-8">
+    <div class="row">
+      <%- include("./partials/dashHeader.ejs") %>
+      <div id="enter-detail" class="col-7">
+        <div class="heading-wrapper">
+          <p class="heading h3 text-muted">Search donors/seekers</p>
+          <p class="paragraph text-muted">Select either Seeker or Donor.</p>
+        </div>
+        <form action="/dashboard" method="GET">
+          <div class="input-group">
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              name="search"
+              placeholder="Search ..."
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+          </div>
+          <div class="results">
+            <% for ( const user of users){ %>
+            <div class="block">
+              <h4><span><%- user.role %>:</span> <%- user.name %></h4>
+              <p><span>Age: </span><%- user.age %></p>
+              <p><span>Gender: </span><%- user.gender %></p>
+              <p><span>Blood Group: </span><%- user.bloodGroup %></p>
+              <p><span>Email: </span><%- user.email %></p>
+              <p><span>Phone: </span><%- user.phone %></p>
+              <p><span>Address: </span><%- user.address.state %></p>
+            </div>
+            <% } %>
+          </div>
+        </form>
+      </div>
+      <div class="col-5"></div>
+    </div>
+  </div>
+  <div id="sidebar-right" class="col-4 vh-100 sticky-top">
+    <div id="sidebar-right-wrapper" class="vh-100"></div>
+  </div>
+</div>

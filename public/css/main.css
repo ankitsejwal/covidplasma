@@ -53,6 +53,27 @@ nav .content {
   background-size: cover;
 }
 
+.results {
+  margin-top: 40px;
+}
+
+.results .block {
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background-color: rgba(174, 174, 175, 0.3);
+}
+
+.results span {
+  color: rgb(106, 106, 106);
+  font-style: italic;
+}
+
+.results h4 {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
 footer {
   background-color: rgb(255, 51, 102);
 }
