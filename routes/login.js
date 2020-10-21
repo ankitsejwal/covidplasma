@@ -20,7 +20,8 @@ router
       // if user found then
       if (user.phone === password) {
         const token = user.generateAuthToken();
-        res.header("x-auth-token", token).send(token);
+        console.log(token);
+        res.header("x-auth-token", token).redirect("edit");
       } else {
         // password didn't match
         res.send("Invalid credentials");

@@ -1,12 +1,12 @@
 <div class="row">
   <div id="sidebar-left" class="col-8">
     <div class="row">
-      <%- include("./partials/dashHeader.ejs") %>
+      <%- include("./partials/_dashboard_header.ejs") %>
       <div id="enter-detail" class="col-7">
         <div class="heading-wrapper">
           <p class="heading h3 text-muted">Search donors/seekers</p>
           <p class="paragraph text-muted">
-            Use dropdown menu to search by Name, blood Group or City.
+            Use dropdown menu to search by Name, Blood Group or City
           </p>
         </div>
         <form action="/dashboard" method="GET">
@@ -30,14 +30,35 @@
           </div>
           <div class="results">
             <% for ( const user of users){ %>
-            <div class="block">
-              <h4><span><%- user.role %>:</span> <%- user.name %></h4>
-              <p><span>Age: </span><%- user.age %></p>
-              <p><span>Gender: </span><%- user.gender %></p>
-              <p><span>Blood Group: </span><%- user.bloodGroup %></p>
-              <p><span>Email: </span><%- user.email %></p>
-              <p><span>Phone: </span><%- user.phone %></p>
-              <p><span>Address: </span><%- user.address.state %></p>
+            <div class="block shadow-sm">
+              <h4>
+                <span class="label"><%- user.role %>:</span
+                ><span class="data"><%- user.name %></span>
+              </h4>
+              <p>
+                <span class="label">Age: </span
+                ><span class="data"><%- user.age %></span>
+              </p>
+              <p>
+                <span class="label">Gender: </span
+                ><span class="data"><%- user.gender %></span>
+              </p>
+              <p>
+                <span class="label">Blood Group: </span
+                ><span class="data"><%- user.bloodGroup %></span>
+              </p>
+              <p>
+                <span class="label">Email: </span
+                ><span class="data"><%- user.email %></span>
+              </p>
+              <p>
+                <span class="label">Phone: </span
+                ><span class="data"><%- user.phone %></span>
+              </p>
+              <p>
+                <span class="label">Address: </span
+                ><span class="data"><%- user.address.state %></span>
+              </p>
             </div>
             <% } %>
           </div>

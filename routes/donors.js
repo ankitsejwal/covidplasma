@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
   .get("/", (req, res) => {
-    res.render("donors", { title: "Donate Plasma" });
+    res.render("donors", { title: "Donate Plasma", user: new User() });
   })
   .post("/", async (req, res) => {
     await User.create({
