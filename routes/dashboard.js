@@ -7,9 +7,6 @@ router.get("/", async (req, res) => {
   const keyword = req.query.keyword;
   const searchBy = req.query.searchBy;
 
-  console.log(keyword);
-  console.log(searchBy);
-
   let searchOptions = {};
 
   if (searchBy == "name") {
@@ -23,8 +20,6 @@ router.get("/", async (req, res) => {
   }
   // if search string empty
   if (!keyword) searchOptions = {};
-
-  console.log(searchOptions);
   const users = await User.find(searchOptions);
   res.render("dashboard", { title: "Dashboard - CovidPlasma", users: users });
 });

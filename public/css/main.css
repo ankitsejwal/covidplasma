@@ -58,15 +58,36 @@ nav .content {
 }
 
 .results .block {
-  margin-top: 40px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.1rem;
+  margin-top: 30px;
   border-radius: 10px;
-  padding: 40px 20px;
-  background-color: rgba(174, 174, 175, 0.3);
+  padding: 30px 20px;
+  line-height: 0.8rem;
+  background-color: rgba(199, 199, 199, 0.3);
 }
 
-.results span {
-  color: rgb(106, 106, 106);
-  font-style: italic;
+.results .block:hover {
+  background-color: rgba(174, 174, 175, 0.3);
+  box-shadow: 10px 10px 8px 10px #888888;
+}
+
+.results p {
+  padding: 4px;
+}
+
+.results p:hover {
+  background-color: white;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.results .label {
+  color: rgb(119, 119, 119);
+}
+
+.results .data {
+  float: right;
 }
 
 .results h4 {
