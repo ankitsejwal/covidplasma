@@ -4,6 +4,7 @@
     placeholder="Enter name"
     name="name"
     type="text"
+    value="<%- user.name %>"
   />
 </div>
 <div class="form-group">
@@ -12,20 +13,23 @@
     placeholder="Enter age"
     name="age"
     type="number"
+    value="<%- user.age %>"
     min="16"
     max="99"
   />
 </div>
 <div class="form-group">
   <select class="form-control form-control-lg" name="gender" id="">
-    <option value="" disabled selected>Select Gender</option>
+    <option value="<%- user.gender %>" disabled selected>Select Gender</option>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
 </div>
 <div class="form-group">
   <select class="form-control form-control-lg" name="bloodGroup" id="">
-    <option value="" disabled selected>Select Blood Group</option>
+    <option value="<%- user.bloodGroup %>" disabled selected>
+      Select Blood Group
+    </option>
     <option value="a+">A+</option>
     <option value="a-">A-</option>
     <option value="b+">B+</option>
@@ -44,6 +48,7 @@
     placeholder="Enter email"
     name="email"
     type="email"
+    value="<%- user.email %>"
   />
 </div>
 <div class="form-group">
@@ -52,6 +57,7 @@
     placeholder="Enter phone"
     name="phone"
     type="text"
+    value="<%- user.phone %>"
   />
 </div>
 <div class="form-group" id="locationField">
@@ -74,6 +80,7 @@
       id="locality"
       name="locality"
       placeholder="Locality"
+      value="<%- user.address.locality %>"
     />
   </div>
   <div class="form-group">
@@ -82,6 +89,7 @@
       placeholder="State"
       id="administrative_area_level_1"
       name="state"
+      value="<%- user.address.state %>"
     />
   </div>
   <div class="form-group">
@@ -91,6 +99,7 @@
       name="zipcode"
       placeholder="Zip Code"
       type="hidden"
+      value="<%- user.address.zipcode %>"
     />
   </div>
   <div class="form-group">
@@ -99,6 +108,7 @@
       id="country"
       name="country"
       placeholder="Country"
+      value="<%- user.address.country %>"
     />
   </div>
 </div>
