@@ -1,4 +1,5 @@
 const express = require("express");
+const bcrypt = require("bcrypt");
 const User = require("../models/user");
 const auth = require("../middleware/auth");
 const router = express.Router();
@@ -8,20 +9,18 @@ router
     res.render("login", { title: "Login Page" });
   })
   .post("/", async (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
-
     try {
-      const user = await User.findOne({ email: email });
+      const user = await User.findOne({ email: req.body.email });
+
       // if user was not found
-      if (!user) {
-        res.send("user not found");
-      }
+      if (!user) res.send("user not found");
+
       // if user found then
-      if (user.phone === password) {
+      if (await bcrypt.compare(req.body.password, user.phone)) {
         const token = user.generateAuthToken();
+
         console.log(token);
-        res.header("x-auth-token", token).redirect("edit");
+        res.header("x-auth-token", token).redirect("login");
       } else {
         // password didn't match
         res.send("Invalid credentials");

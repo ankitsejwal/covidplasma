@@ -39,11 +39,12 @@ const userSchema = new mongoose.Schema({
     minlength: 8,
     maxlength: 50,
     required: true,
+    unique: true,
   },
   phone: {
     type: String,
-    minlength: 9,
-    maxlength: 10,
+    minlength: 10,
+    maxlength: 1024,
     required: true,
   },
   address: {

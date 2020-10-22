@@ -105,3 +105,9 @@ dist
 
 # MacOS files
 .DS_Store
+
+# rest client
+*.rest
+
+# ignore dev files
+test.js
