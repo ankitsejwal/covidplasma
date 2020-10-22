@@ -108,3 +108,6 @@ dist
 
 # rest client
 *.rest
+
+# ignore dev files
+test.js
