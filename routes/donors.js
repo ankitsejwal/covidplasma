@@ -1,5 +1,7 @@
 const express = require("express");
+const bcrypt = require("bcrypt");
 const User = require("../models/user");
+const { hash } = require("bcrypt");
 
 const router = express.Router();
 
@@ -14,7 +16,7 @@ router
       gender: req.body.gender,
       bloodGroup: req.body.bloodGroup,
       email: req.body.email,
-      phone: req.body.phone,
+      phone: await generateHashedPassword(req.body.phone),
       address: {
         locality: req.body.locality,
         state: req.body.state,
@@ -23,7 +25,14 @@ router
       },
       role: "donor",
     });
+
     res.redirect("/donors");
   });
+
+async function generateHashedPassword(password) {
+  const salt = await bcrypt.genSalt();
+  const hash = await bcrypt.hash(password, salt);
+  return hash;
+}
 
 module.exports = router;
