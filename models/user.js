@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -34,6 +35,12 @@ const userSchema = new mongoose.Schema({
     ],
     required: true,
   },
+  phone: {
+    type: String,
+    minlength: 9,
+    maxlength: 10,
+    required: true,
+  },
   email: {
     type: String,
     minlength: 8,
@@ -41,9 +48,9 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  phone: {
+  password: {
     type: String,
-    minlength: 10,
+    minlength: 1,
     maxlength: 1024,
     required: true,
   },
@@ -90,6 +97,29 @@ userSchema.methods.generateAuthToken = function () {
     process.env.JWT_PRIVATE_KEY
   );
   return token;
+};
+
+userSchema.methods.create = async function (req, role) {
+  this.name = req.body.name;
+  this.age = req.body.age;
+  this.gender = req.body.gender;
+  this.bloodGroup = req.body.bloodGroup;
+  this.email = req.body.email;
+  this.phone = req.body.phone;
+  this.password = await this.generateHashedPassword(req.body.password);
+  this.address.locality = req.body.locality;
+  this.address.state = req.body.state;
+  this.address.zipcode = req.body.zipcode;
+  this.address.country = req.body.country;
+  this.role = role;
+
+  this.save();
+};
+
+userSchema.methods.generateHashedPassword = async function (password) {
+  const salt = await bcrypt.genSalt();
+  const hash = await bcrypt.hash(password, salt);
+  return hash;
 };
 
 module.exports = mongoose.model("User", userSchema);
