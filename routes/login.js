@@ -16,7 +16,7 @@ router
       if (!user) res.send("user not found");
 
       // if user found then
-      if (await bcrypt.compare(req.body.password, user.phone)) {
+      if (await bcrypt.compare(req.body.password, user.password)) {
         const token = user.generateAuthToken();
 
         console.log(token);
