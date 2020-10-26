@@ -51,9 +51,13 @@ header nav ul {
 
 input,
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding-left: 15px;
   color: rgb(91, 56, 28);
   border: 1px solid rgb(108, 40, 57);
+  font-family: "Share Tech Mono", monospace;
 }
 
 .searchbar {
