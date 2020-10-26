@@ -12,6 +12,8 @@ header nav {
 header nav ul {
   padding: 30px 0;
   margin-left: 3rem;
+  line-height: 1rem;
+  font-weight: bold;
   /* background-color: grey; */
 }
 
