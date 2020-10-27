@@ -5,16 +5,21 @@ body {
 
 header nav {
   font-family: "Share Tech Mono", monospace;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-top: 20px;
   /* background-color: aliceblue; */
 }
 
 header nav ul {
   line-height: 1rem;
-  font-weight: bold;
   padding: 20px 0;
   /* background-color: grey; */
+}
+
+header nav li a {
+  background: rgba(237, 237, 237, 0.3);
+  margin: 3px;
+  border-radius: 4px;
 }
 
 #main-wrapper .main {
@@ -82,6 +87,10 @@ select {
   border: 1px solid rgb(108, 40, 57);
 }
 
+.searchbar .btn:hover {
+  background-color: rgb(225, 39, 85);
+}
+
 .searchbar .form-control {
   border: none;
 }
@@ -90,16 +99,55 @@ select {
   border: none;
 }
 
-#sidebar {
-  background-image: url("../img/covid-bg.jpg");
-  background-position: center;
-  background-size: cover;
+.sidebar {
   padding: 0;
 }
 
-#sidebar-wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
+.sidebar .donors {
+  background-image: url("../img/donors-bg.jpg");
+}
+
+.sidebar .seekers {
+  background-image: url("../img/seekers-bg.jpg");
+}
+
+.sidebar .login {
+  background-image: url("../img/login-bg.jpg");
+}
+
+.sidebar .dashboard {
+  background-image: url("../img/dashboard-bg.jpg");
+}
+
+.sidebar .background {
+  background-position: center;
   background-size: cover;
+}
+
+.sidebar .wrapper {
+  position: absolute;
+  bottom: 0;
+  margin: 0 50px;
+  color: white;
+}
+
+.sidebar .wrapper h3 {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.sidebar .wrapper p {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.sidebar .wrapper .foot p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  margin: 40px 0;
+  opacity: 0.7;
 }
 
 .results {
@@ -151,5 +199,5 @@ form {
 }
 
 footer {
-  background-color: rgb(255, 51, 102);
+  background-color: rgb(225, 39, 85);
 }
