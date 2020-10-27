@@ -5,16 +5,21 @@ body {
 
 header nav {
   font-family: "Share Tech Mono", monospace;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-top: 20px;
   /* background-color: aliceblue; */
 }
 
 header nav ul {
   line-height: 1rem;
-  font-weight: bold;
   padding: 20px 0;
   /* background-color: grey; */
+}
+
+header nav li a {
+  background: rgba(237, 237, 237, 0.3);
+  margin: 3px;
+  border-radius: 4px;
 }
 
 #main-wrapper .main {
