@@ -87,6 +87,10 @@ select {
   border: 1px solid rgb(108, 40, 57);
 }
 
+.searchbar .btn:hover {
+  background-color: rgb(225, 39, 85);
+}
+
 .searchbar .form-control {
   border: none;
 }
@@ -195,5 +199,5 @@ form {
 }
 
 footer {
-  background-color: rgb(255, 51, 102);
+  background-color: rgb(225, 39, 85);
 }
