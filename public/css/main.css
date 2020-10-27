@@ -28,16 +28,32 @@ header nav ul {
 #main-wrapper .main .heading-wrapper .heading {
   font-family: "Share Tech Mono", monospace;
   font-size: 3rem;
+  color: rgb(108, 40, 57);
 }
 
 #main-wrapper .main .heading-wrapper .paragraph {
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-weight: 300;
+  color: rgb(108, 40, 57);
+}
+
+.btn-primary {
+  background-color: rgb(108, 40, 57);
+  border: none;
+}
+
+.userform .btn-primary {
+  color: rgb(108, 40, 57);
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(108, 40, 57);
+}
+
+.userform .btn-primary:hover {
+  background-color: rgb(232, 75, 103);
 }
 
 .form-control {
-  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(108, 40, 57);
   color: rgb(11, 33, 58);
   font-family: "Share Tech Mono", monospace;
@@ -101,7 +117,7 @@ select {
 }
 
 .results .block:hover {
-  background-color: rgba(174, 174, 175, 0.3);
+  background-color: rgba(108, 40, 57, 0.1);
   box-shadow: 10px 10px 8px 10px #888888;
 }
 
@@ -110,7 +126,8 @@ select {
 }
 
 .results p:hover {
-  background-color: white;
+  background-color: rgb(232, 75, 103);
+  color: white;
   padding: 4px;
   border-radius: 6px;
 }
