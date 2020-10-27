@@ -96,12 +96,17 @@ select {
 
 .sidebar .donors {
   background-image: url("../img/donors-bg.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .sidebar .seekers {
   background-image: url("../img/seekers-bg.jpg");
+}
+
+.sidebar .login {
+  background-image: url("../img/login-bg.jpg");
+}
+
+.sidebar .background {
   background-position: center;
   background-size: cover;
 }
