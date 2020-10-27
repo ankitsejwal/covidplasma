@@ -16,11 +16,14 @@ if (!process.env.JWT_PRIVATE_KEY) {
 
 // connect database
 mongoose
-  .connect("mongodb://localhost/covidplasma", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(
+    `mongodb+srv://covid:${process.env.MONGO_PASSWORD}@cluster0.xlq5u.mongodb.net/covidplasma?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }
+  )
   .then(console.log("connected to database..."))
   .catch((err) => console.error(err));
 
