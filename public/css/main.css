@@ -106,6 +106,10 @@ select {
   background-image: url("../img/login-bg.jpg");
 }
 
+.sidebar .dashboard {
+  background-image: url("../img/dashboard-bg.jpg");
+}
+
 .sidebar .background {
   background-position: center;
   background-size: cover;
