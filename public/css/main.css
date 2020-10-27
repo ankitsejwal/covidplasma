@@ -90,16 +90,14 @@ select {
   border: none;
 }
 
-#sidebar {
-  background-image: url("../img/covid-bg.jpg");
+#sidebar-donors {
+  background-image: url("../img/donors-bg.jpg");
   background-position: center;
   background-size: cover;
   padding: 0;
 }
 
 #sidebar-wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
 }
 
 .results {
