@@ -1,16 +1,20 @@
 <div class="row">
-  <div id="main-wrapper" class="col-8">
-    <div class="row">
-      <%- include("./partials/_header.ejs") %>
-      <div class="main" class="col-7">
+  <div id="main-wrapper" class="col-sm-12 col-md-12 col-lg-8">
+    <div class="row justify-content-center">
+      <div class="main col-sm-12 col-md-9 col-lg-8">
+        <%- include("./partials/_header.ejs") %>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="main col-sm-12 col-md-9 col-lg-8">
         <div class="heading-wrapper">
-          <p class="heading h3 text-muted">Login</p>
-          <p class="paragraph text-muted">
+          <p class="heading h3">Login</p>
+          <p class="paragraph">
             If you are a Donor or Seeker<br />
             you can edit or delete your details after login.
           </p>
         </div>
-        <form action="/login" method="post">
+        <form class="userform" action="/login" method="post">
           <div class="form-group">
             <input
               class="form-control form-control-lg"
@@ -31,11 +35,15 @@
             Submit
           </button>
         </form>
-      </div>
-      <div class="col-5"></div>
+      <!-- <div class="col-5"></div> -->
     </div>
   </div>
-  <div id="sidebar" class="col-4 vh-100 sticky-top">
+</div>
+  <div
+    id="sidebar"
+    class="col-sm-12 col-md-12 col-lg-4 hidden-lg-up vh-100 sticky-top"
+  >
     <div id="sidebar-wrapper" class="vh-100"></div>
   </div>
+</div>
 </div>

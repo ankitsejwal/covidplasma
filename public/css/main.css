@@ -50,7 +50,8 @@ header nav ul {
 }
 
 .userform .btn-primary:hover {
-  background-color: rgb(232, 75, 103);
+  color: white;
+  background-color: rgb(108, 40, 57);
 }
 
 .form-control {
