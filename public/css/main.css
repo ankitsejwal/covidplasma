@@ -101,7 +101,7 @@ select {
 }
 
 .sidebar .seekers {
-  background-image: url("../img/donors-bg.jpg");
+  background-image: url("../img/seekers-bg.jpg");
   background-position: center;
   background-size: cover;
 }
