@@ -6,12 +6,11 @@ body {
 header nav {
   font-family: "Share Tech Mono", monospace;
   font-size: 1.3rem;
+  margin-top: 40px;
   /* background-color: aliceblue; */
 }
 
 header nav ul {
-  padding: 30px 0;
-  margin-left: 3rem;
   line-height: 1rem;
   font-weight: bold;
   /* background-color: grey; */
