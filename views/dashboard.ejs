@@ -25,7 +25,7 @@
               <select class="custom-select custom-select-lg" name="searchBy">
                 <option value="name">Name</option>
                 <option value="bloodGroup">Blood</option>
-                <option value="state">State</option>
+                <option value="city">City</option>
               </select>
             </div>
             <div class="input-group-append">
@@ -63,7 +63,11 @@
               </p>
               <p>
                 <span class="label">Address: </span
-                ><span class="data"><%- user.address.locality %>, <%- user.address.state %>, <%- user.address.country %></span>
+                ><span class="data"><%- user.address.locality %></span>
+              </p>
+              <p>
+                <span class="label">.</span
+                ><span class="data"><%- user.address.state %>, <%- user.address.country %></span>
               </p>
             </div>
             <% } %>
