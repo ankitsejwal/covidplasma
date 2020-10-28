@@ -24,7 +24,6 @@ router
         address: {
           locality: req.body.locality,
           state: req.body.state,
-          zipcode: req.body.zipcode,
           country: req.body.country,
         },
       },
