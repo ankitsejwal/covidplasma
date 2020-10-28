@@ -67,12 +67,6 @@ const userSchema = new mongoose.Schema({
       maxlength: 50,
       required: false,
     },
-    zipcode: {
-      type: Number,
-      minlength: 0,
-      maxlength: 10,
-      required: false,
-    },
     country: {
       type: String,
       minlength: 0,
@@ -109,7 +103,6 @@ userSchema.methods.create = async function (req, role) {
   this.password = await this.generateHashedPassword(req.body.password);
   this.address.locality = req.body.locality;
   this.address.state = req.body.state;
-  this.address.zipcode = req.body.zipcode;
   this.address.country = req.body.country;
   this.role = role;
 
