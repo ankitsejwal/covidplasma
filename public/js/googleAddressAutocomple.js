@@ -3,7 +3,6 @@ let autocomplete;
 const componentForm = {
   locality: "long_name",
   administrative_area_level_1: "long_name",
-  postal_code: "short_name",
   country: "long_name",
 };
 
