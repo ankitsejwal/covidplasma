@@ -199,9 +199,13 @@ form {
 }
 
 footer {
-  color: rgb(108, 40, 57);
-
+  color: rgb(72, 23, 35);
   background-color: rgb(232, 75, 103);
   padding: 2px;
   font-family: "Share Tech Mono", monospace;
+}
+
+footer a,
+a:visited {
+  color: white;
 }
