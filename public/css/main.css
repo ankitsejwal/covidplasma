@@ -199,7 +199,7 @@ form {
 }
 
 footer {
-  color: rgb(72, 23, 35);
+  color: white;
   background-color: rgb(232, 75, 103);
   padding: 2px;
   font-family: "Share Tech Mono", monospace;
@@ -207,5 +207,5 @@ footer {
 
 footer a,
 a:visited {
-  color: white;
+  color: rgb(72, 23, 35);
 }
