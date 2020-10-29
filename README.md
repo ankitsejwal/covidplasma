@@ -20,7 +20,7 @@ You can help contribute in any one or more ways:
 - Thousands of 🧔🏽👩🏽 in growing economy with inadequate health infrastructre are left on there own to find convalescent plasma donors
 - Currently there are thousands of numbers floating on the social media and whatsapp groups of kind people who are willing to donate plasma, this possesses privacy issues and many other challenges.
 
-### 💊 Workflow without covidplasma.world:
+### ⛑ Workflow without covidplasma.world:
 
 - Critical seeker is asked to arrange plasma
 - Seeker posts request on various whatsapp groups and social media
@@ -28,7 +28,7 @@ You can help contribute in any one or more ways:
 - Seeker calls each donor one by one to ask for blood group, location and whether they can donate
 - This is repeated by many of their relatives to help find them a donor
 
-### 💊 Workflow with covidplasma.world:
+### ⛑ Workflow with covidplasma.world:
 
 - Critical seeker is asked to arrange plasma
 - Seekers visits covidplasma.world and enter their details 📱
@@ -36,4 +36,8 @@ You can help contribute in any one or more ways:
 
 ---
 
-- This project is carried out in good faith in the hope of saving some lives.
+This project is carried out in good faith in the hope of saving some lives.
+
+---
+
+"Star" to check for updates. Will try to keep README.md updated for communication.
