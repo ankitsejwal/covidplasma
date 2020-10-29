@@ -199,5 +199,9 @@ form {
 }
 
 footer {
-  background-color: rgb(225, 39, 85);
+  color: rgb(108, 40, 57);
+
+  background-color: rgb(232, 75, 103);
+  padding: 2px;
+  font-family: "Share Tech Mono", monospace;
 }
