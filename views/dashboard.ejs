@@ -38,8 +38,8 @@
             <% for ( const user of users){ %>
             <div class="block shadow-sm">
               <h4>
-                <span class="label"><%- user.role %>:</span
-                ><span class="data"><%- user.name %></span>
+                <span class="label text-capitalize"><%- user.role %>:</span
+                ><span class="data text-capitalize"><%- user.name %></span>
               </h4>
               <p>
                 <span class="label">Age: </span
@@ -47,11 +47,11 @@
               </p>
               <p>
                 <span class="label">Gender: </span
-                ><span class="data"><%- user.gender %></span>
+                ><span class="data text-capitalize"><%- user.gender %></span>
               </p>
               <p>
                 <span class="label">Blood Group: </span
-                ><span class="data"><%- user.bloodGroup %></span>
+                ><span class="data text-uppercase"><%- user.bloodGroup %></span>
               </p>
               <p>
                 <span class="label">Email: </span
@@ -63,11 +63,11 @@
               </p>
               <p>
                 <span class="label">Address: </span
-                ><span class="data"><%- user.address.locality %></span>
+                ><span class="data text-capitalize"><%- user.address.locality %></span>
               </p>
               <p>
                 <span class="label">.</span
-                ><span class="data"><%- user.address.state %>, <%- user.address.country %></span>
+                ><span class="data text-capitalize"><%- user.address.state %>, <%- user.address.country %></span>
               </p>
             </div>
             <% } %>
