@@ -9,13 +9,14 @@ router
   })
   .post("/", async (req, res) => {
     const user = new User();
-    console.log("post");
 
-    const { error } = user.validateData(req.body);
+    const { value, error } = user.validateData(req.body);
+
+    console.log(value);
+    console.log(error);
 
     if (error) return res.send(error.details[0].message);
-
-    user.create(req, "donor");
+    user.create(value, "donor");
     res.redirect("/donors");
   });
 

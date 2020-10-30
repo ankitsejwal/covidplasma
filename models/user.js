@@ -106,17 +106,17 @@ userSchema.methods.generateAuthToken = function () {
   return token;
 };
 
-userSchema.methods.create = async function (req, role) {
-  this.name = req.body.name;
-  this.age = req.body.age;
-  this.gender = req.body.gender;
-  this.bloodGroup = req.body.bloodGroup;
-  this.phone = req.body.phone;
-  this.email = req.body.email;
-  this.password = await this.generateHashedPassword(req.body.password);
-  this.address.locality = req.body.locality;
-  this.address.state = req.body.state;
-  this.address.country = req.body.country;
+userSchema.methods.create = async function (value, role) {
+  this.name = value.name;
+  this.age = value.age;
+  this.gender = value.gender;
+  this.bloodGroup = value.bloodGroup;
+  this.phone = value.phone;
+  this.email = value.email;
+  this.password = await this.generateHashedPassword(value.password);
+  this.address.locality = value.locality;
+  this.address.state = value.state;
+  this.address.country = value.country;
   this.role = role;
 
   this.save();
@@ -138,11 +138,9 @@ userSchema.methods.validateData = function (data) {
     email: Joi.string().trim().email().lowercase().min(8).max(50).required(),
     password: Joi.string().trim().min(5).max(100).required(),
     repeat_password: Joi.ref("password"),
-    address: {
-      locality: Joi.string().trim().lowercase().required(),
-      state: Joi.string().trim().lowercase().required(),
-      country: Joi.string().trim().lowercase().required(),
-    },
+    locality: Joi.string().trim().lowercase().required(),
+    state: Joi.string().trim().lowercase().required(),
+    country: Joi.string().trim().lowercase().required(),
   });
 
   return schema.validate(data);
