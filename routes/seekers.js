@@ -10,8 +10,14 @@ router
   })
   .post("/", async (req, res) => {
     const user = new User();
-    user.create(req, "seeker");
 
+    const { value, error } = user.validateData(req.body);
+
+    console.log(value);
+    console.log(error);
+
+    if (error) return res.send(error.details[0].message);
+    user.create(value, "seeker");
     res.redirect("/seekers");
   });
 
