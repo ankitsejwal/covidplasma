@@ -40,7 +40,9 @@
     <option value="o-">O-</option>
     <option value="notsure">not sure</option>
   </select>
-  <small class="form-text text-muted">Choose not sure when unaware</small>
+  <small class="form-text text-muted"
+    >Select &nbsp; not sure &nbsp; if you don't know your blood group</small
+  >
 </div>
 <div class="form-group">
   <input
@@ -80,7 +82,7 @@
     type="password"
   />
   <small class="form-text text-muted"
-    >You can use email and password later for login to edit your details</small
+    >You can use email and password to edit your details later</small
   >
 </div>
 <div class="form-group" id="locationField">
@@ -93,7 +95,7 @@
     type="text"
   />
   <small class="form-text text-muted"
-    >Enter the biggest city near you with COVID hospitals</small
+    >Enter your city or the biggest city near you with hospitals</small
   >
 </div>
 <div id="address">
@@ -103,6 +105,7 @@
       id="locality"
       name="locality"
       placeholder="City"
+      type="hidden"
       value="<%- user.address.locality %>"
     />
   </div>
@@ -112,6 +115,7 @@
       placeholder="State"
       id="administrative_area_level_1"
       name="state"
+      type="hidden"
       value="<%- user.address.state %>"
     />
   </div>
@@ -119,8 +123,9 @@
     <input
       class="form-control form-control-lg"
       id="country"
-      name="country"
       placeholder="Country"
+      name="country"
+      type="hidden"
       value="<%- user.address.country %>"
     />
   </div>
