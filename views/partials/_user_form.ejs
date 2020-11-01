@@ -103,6 +103,7 @@
       id="locality"
       name="locality"
       placeholder="City"
+      type="hidden"
       value="<%- user.address.locality %>"
     />
   </div>
@@ -112,6 +113,7 @@
       placeholder="State"
       id="administrative_area_level_1"
       name="state"
+      type="hidden"
       value="<%- user.address.state %>"
     />
   </div>
@@ -119,8 +121,9 @@
     <input
       class="form-control form-control-lg"
       id="country"
-      name="country"
       placeholder="Country"
+      name="country"
+      type="hidden"
       value="<%- user.address.country %>"
     />
   </div>
