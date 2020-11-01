@@ -6,9 +6,7 @@ const router = express.Router();
 
 router
   .get("/", async (req, res) => {
-    const user = await User.findById(req.query.id);
-    console.log(user);
-
+    const user = await User.findById("5f9ee1a80a1ee5e0ab72048e");
     res.render("edit", { title: "Edit details", user: user });
   })
   .post("/", async (req, res) => {
