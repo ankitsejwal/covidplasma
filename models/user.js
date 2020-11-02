@@ -118,7 +118,7 @@ userSchema.methods.create = async function (value, role) {
   this.address.country = value.country;
   this.role = role;
 
-  this.save();
+  await this.save();
 };
 
 userSchema.methods.generateHashedPassword = async function (password) {
