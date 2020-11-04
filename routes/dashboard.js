@@ -4,13 +4,14 @@ const User = require("../models/user");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const keyword = req.query.keyword;
+  let keyword = req.query.keyword;
   const select = req.query.select;
+  keyword = keyword.toLowerCase();
 
   let opt = {};
 
   if (select == "name") opt = { name: new RegExp(keyword) };
-  if (select == "bloodGroup") opt = { bloodGroup: keyword.toLowerCase() };
+  if (select == "bloodGroup") opt = { bloodGroup: keyword };
   if (select == "locality") opt = { "address.locality": new RegExp(keyword) };
 
   // if search string empty

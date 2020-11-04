@@ -5,6 +5,7 @@
     name="name"
     type="text"
     value="<%- user.name %>"
+    required
   />
 </div>
 <div class="form-group">
@@ -16,17 +17,18 @@
     value="<%- user.age %>"
     min="16"
     max="99"
+    required
   />
 </div>
 <div class="form-group">
-  <select class="form-control form-control-lg" name="gender">
+  <select class="form-control form-control-lg" name="gender" required>
     <option disabled selected>Select Gender</option>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
 </div>
 <div class="form-group">
-  <select class="form-control form-control-lg" name="bloodGroup">
+  <select class="form-control form-control-lg" name="bloodGroup" required>
     <option disabled selected>Select Blood Group</option>
     <option value="a+">A+</option>
     <option value="a-">A-</option>
@@ -49,6 +51,7 @@
     name="phone"
     type="text"
     value="<%- user.phone %>"
+    required
   />
 </div>
 <div class="form-group">
@@ -58,6 +61,7 @@
     name="email"
     type="email"
     value="<%- user.email %>"
+    required
   />
 </div>
 
@@ -68,6 +72,7 @@
     name="password"
     placeholder="Enter password"
     type="password"
+    required
   />
 </div>
 <div class="form-group">
@@ -77,6 +82,7 @@
     name="repeat_password"
     placeholder="Re-enter password"
     type="password"
+    required
   />
   <small class="form-text text-muted"
     >You can use email and password to edit your details later</small
@@ -90,6 +96,7 @@
     placeholder="Enter a city near you"
     onFocus="geolocate()"
     type="text"
+    required
   />
   <small class="form-text text-muted"
     >Enter your city or the biggest city near you with hospitals</small
@@ -104,6 +111,7 @@
       placeholder="City"
       type="hidden"
       value="<%- user.address.locality %>"
+      required
     />
   </div>
   <div class="form-group">
@@ -114,6 +122,7 @@
       name="state"
       type="hidden"
       value="<%- user.address.state %>"
+      required
     />
   </div>
   <div class="form-group">
@@ -124,6 +133,7 @@
       name="country"
       type="hidden"
       value="<%- user.address.country %>"
+      required
     />
   </div>
 </div>
